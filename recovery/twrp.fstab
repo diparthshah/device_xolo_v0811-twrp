@@ -1,0 +1,21 @@
+# ANDROID FSTAB FILE
+# DEVICE PARTITION AND STORAGE ALLOCATION
+# SPECIFIED PARTITION FOR Xolo Black-1x
+
+#mount-point      #file_system        #src                                               #flags 
+
+/system           ext4                /dev/block/platform/mtk-msdc.0/by-name/system     flags=display="System";backup=1;wipeinguis
+/cache            ext4                /dev/block/platform/mtk-msdc.0/by-name/cache      flags=display="Cache"
+/data             ext4                /dev/block/platform/mtk-msdc.0/by-name/userdata   flags=display="Data"  
+/boot             emmc                /dev/block/platform/mtk-msdc.0/by-name/boot       flags=display="boot";backup=1
+/recovery         emmc                /dev/block/platform/mtk-msdc.0/by-name/recovery   flags=display="recovery";backup=1
+/nvram            emmc                /dev/block/platform/mtk-msdc.0/by-name/nvram      flags=display="nvram";backup=1
+/lk               emmc                /dev/block/platform/mtk-msdc.0/by-name/lk         flags=display="Uboot";backup=1;flashimg=1
+/logo             emmc                /dev/block/platform/mtk-msdc.0/by-name/logo       flags=display="logo";backup=1
+/sdcard           auto                /dev/block/mmcblk1p1                              flags=display="Micro SDCard";backup=0
+/usbotg           auto                /dev/block/sda1                                   /dev/block/sda                                  flags=display="USB OTG";backup=0
+
+
+                                     
+    
+
